@@ -1,0 +1,143 @@
+
+.container {
+  display: flex;
+  flex-direction: row; /* 명시적으로 가로 방향 설정 */
+  height: 100vh;
+  width: 100%;
+  gap: 0; /* 간격 제거 */
+}
+
+.map-container {
+  flex: 5; /* 지도가 2/3 차지 */
+  position: relative;
+  height: 100%;
+  min-width: 0; /* flex 축소 허용 */
+}
+
+.sidebar {
+  flex: 1; /* 사이드바가 1/3 차지 */
+  background-color: #f8f9fa;
+  padding: 20px;
+  overflow-y: auto;
+  border-left: 1px solid #dee2e6;
+  height: 100%;
+  box-sizing: border-box; /* 패딩 포함한 크기 계산 */
+}
+
+.sidebar-title {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.hotel-info {
+  background: #e3f2fd;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.hotel-info span {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.refresh-button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.refresh-button:hover {
+  background: #2980b9;
+}
+
+.no-shelters {
+  text-align: center;
+  color: #666;
+}
+
+.shelter-item {
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shelter-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.shelter-item.closest {
+  border-left: 4px solid #e74c3c;
+}
+
+.shelter-item:not(.closest) {
+  border-left: 4px solid #3498db;
+}
+
+.shelter-name {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.shelter-address {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.shelter-distance {
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.shelter-id {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #666;
+}
+
+.directions-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.2s ease;
+}
+
+.directions-btn:hover {
+  background: #218838;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.directions-btn:active {
+  transform: translateY(0);
+}

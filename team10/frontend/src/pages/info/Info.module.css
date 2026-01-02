@@ -1,0 +1,200 @@
+.pageContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  padding: 16px;
+}
+
+.contentWrapper {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.headerTitleGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.headerIcon {
+  width: 40px;
+  height: 40px;
+  color: #2563eb;
+}
+
+.headerTitle {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin: 0;
+}
+
+.headerSubtitle {
+  color: #1d4ed8;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* カード */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.cardIcon {
+  width: 32px;
+  height: 32px;
+  color: #2563eb;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.cardText {
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+.cardButtonIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+/* 緊急連絡先カード */
+.contactsList {
+  margin-bottom: 16px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.contactItem:last-child {
+  margin-bottom: 0;
+}
+
+.contactLabel {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.contactNumber {
+  font-weight: bold;
+}
+.contactNumberFire { color: #dc2626; }
+.contactNumberPolice { color: #2563eb; }
+.contactNumberDial { color: #059669; }
+
+/* ガイドライン */
+.guidelinesHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.guidelinesIcon {
+  width: 32px;
+  height: 32px;
+  color: #ea580c;
+}
+
+.guidelinesTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.guidelinesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.guidelineItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.guidelineNumber {
+  width: 24px;
+  height: 24px;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.guidelineText {
+  color: #374151;
+  margin: 0;
+}
+
+
+/* フッター */
+.footer {
+  text-align: center;
+  margin-top: 32px;
+  color: #4b5563;
+}
+
+.footerUpdateInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.footerIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.footerText {
+  font-size: 14px;
+}

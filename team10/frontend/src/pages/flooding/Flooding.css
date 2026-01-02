@@ -1,0 +1,396 @@
+/*!* --- 全体のスタイルと変数定義 --- *!*/
+/*:root {*/
+/*  --primary-color: #007bff;*/
+/*  --secondary-color: #6c757d;*/
+/*  --background-color-panel: rgba(255, 255, 255, 0.95); !* パネルの背景色（少し透過） *!*/
+/*  --text-color: #343a40;*/
+/*  --border-color: #dee2e6;*/
+/*  --shadow: 0 4px 12px rgba(0, 0, 0, 0.15); !* 影を少し強調 *!*/
+/*  --font-family: 'Helvetica Neue', Arial, sans-serif;*/
+/*}*/
+
+/*!* --- 基本設定 --- *!*/
+/*body {*/
+/*  margin: 0;*/
+/*  font-family: var(--font-family);*/
+/*  color: var(--text-color);*/
+/*  overflow: hidden; !* 画面全体のスクロールを禁止 *!*/
+/*}*/
+
+/** {*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+/*!* --- 全画面レイアウトの親 --- *!*/
+/*.container.full-height {*/
+/*  width: 100vw;*/
+/*  height: 100vh;*/
+/*  position: relative; !* 子要素を絶対配置する基準点 *!*/
+/*}*/
+
+/*!* ★★★ 修正のポイント ★★★ *!*/
+/*!* mainContentとmap-wrapperが画面全体に広がるように設定 *!*/
+/*.mainContent.map-wrapper {*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  !* z-indexは指定せず、他の要素の背面に配置 *!*/
+/*}*/
+
+/*!* マップコンテナは親要素いっぱいに広がる *!*/
+/*.map-container {*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*}*/
+
+/*!* --- オーバーレイ要素の共通設定 --- *!*/
+/*.header,*/
+/*.sidebar,*/
+/*.footer,*/
+/*.legend-container {*/
+/*  position: absolute;*/
+/*  z-index: 10; !* マップより手前に表示 *!*/
+/*  background-color: var(--background-color-panel);*/
+/*  border-radius: 8px;*/
+/*  box-shadow: var(--shadow);*/
+/*}*/
+
+/*!* --- ヘッダー --- *!*/
+/*.header {*/
+/*  top: 1rem;*/
+/*  left: 50%;*/
+/*  transform: translateX(-50%); !* 中央揃え *!*/
+/*  width: 90%;*/
+/*  max-width: 600px;*/
+/*  padding: 1rem;*/
+/*  text-align: center;*/
+/*}*/
+/*.header h1 {*/
+/*  margin: 0 0 0.5rem 0;*/
+/*  font-size: 1.5rem;*/
+/*  color: var(--primary-color);*/
+/*}*/
+/*.header p {*/
+/*  margin: 0 0 1rem 0;*/
+/*  color: var(--secondary-color);*/
+/*  font-size: 0.9rem;*/
+/*}*/
+/*.location-switcher button {*/
+/*  background-color: var(--primary-color);*/
+/*  color: white;*/
+/*  border: none;*/
+/*  padding: 0.6rem 1.2rem;*/
+/*  border-radius: 5px;*/
+/*  cursor: pointer;*/
+/*  font-size: 0.9rem;*/
+/*  transition: background-color 0.3s;*/
+/*}*/
+/*.location-switcher button:hover:not(:disabled) {*/
+/*  background-color: #0056b3;*/
+/*}*/
+/*.location-switcher button:disabled {*/
+/*  background-color: #c0c0c0;*/
+/*  cursor: not-allowed;*/
+/*}*/
+
+
+/*!* --- サイドバー --- *!*/
+/*.sidebar {*/
+/*  top: 1rem;*/
+/*  left: 1rem;*/
+/*  width: 280px;*/
+/*  padding: 1.5rem;*/
+/*  max-height: calc(100vh - 8rem); !* 高さを制限 *!*/
+/*  overflow-y: auto;*/
+/*}*/
+/*.sidebar h2 {*/
+/*  margin-top: 0;*/
+/*  margin-bottom: 1.5rem;*/
+/*  font-size: 1.4rem;*/
+/*  border-bottom: 2px solid var(--primary-color);*/
+/*  padding-bottom: 0.5rem;*/
+/*}*/
+/*.layer-control {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  margin-bottom: 1rem;*/
+/*}*/
+/*.layer-control input[type="checkbox"] {*/
+/*  margin-right: 0.8rem;*/
+/*  width: 18px;*/
+/*  height: 18px;*/
+/*  cursor: pointer;*/
+/*}*/
+/*.layer-control label {*/
+/*  font-size: 1rem;*/
+/*  cursor: pointer;*/
+/*}*/
+
+
+/*!* --- 凡例 --- *!*/
+/*.legend-container {*/
+/*  bottom: 4rem; !* フッターと重ならないように調整 *!*/
+/*  right: 1rem;*/
+/*  padding: 10px;*/
+/*  max-height: 50vh;*/
+/*  overflow-y: auto;*/
+/*}*/
+/*.legend-item p {*/
+/*  margin: 0 0 5px 0;*/
+/*  font-weight: bold;*/
+/*  font-size: 0.9rem;*/
+/*}*/
+/*.legend-item img {*/
+/*  max-width: 100%;*/
+/*}*/
+
+
+/*!* --- フッター --- *!*/
+/*.footer {*/
+/*  bottom: 1rem;*/
+/*  left: 50%;*/
+/*  transform: translateX(-50%);*/
+/*  padding: 0.5rem 1.5rem;*/
+/*}*/
+/*.backLink {*/
+/*  color: var(--primary-color);*/
+/*  text-decoration: none;*/
+/*  font-weight: bold;*/
+/*}*/
+/*.backLink:hover {*/
+/*  text-decoration: underline;*/
+/*}*/
+
+/*!* --- 地図上のピン --- *!*/
+/*.location-pin {*/
+/*  width: 20px;*/
+/*  height: 20px;*/
+/*  border-radius: 50% 50% 50% 0;*/
+/*  transform: rotate(-45deg);*/
+/*  border: 2px solid white;*/
+/*  box-shadow: 0 2px 5px rgba(0,0,0,0.4);*/
+/*}*/
+/*.hotel-pin { background-color: #ff4d4d; }*/
+/*.user-pin { background-color: #4d79ff; }*/
+
+
+/*!* --- レスポンシブ対応 (スマートフォンなど) --- *!*/
+/*@media (max-width: 768px) {*/
+/*  .sidebar {*/
+/*    !* 画面が狭い場合はヘッダーの下に配置 *!*/
+/*    top: auto;*/
+/*    bottom: 4rem; !* フッターの上 *!*/
+/*    left: 1rem;*/
+/*    right: 1rem;*/
+/*    width: auto;*/
+/*    max-height: 35vh; !* 高さをさらに制限 *!*/
+/*  }*/
+
+/*  .header {*/
+/*    width: 95%;*/
+/*  }*/
+
+/*  .legend-container {*/
+/*    display: none; !* 小画面では凡例を非表示にする（任意） *!*/
+/*  }*/
+/*}*/
+
+/* --- 全体のスタイルと変数定義 --- */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color-panel: rgba(255, 255, 255, 0.95); /* パネルの背景色（少し透過） */
+  --text-color: #343a40;
+  --border-color: #dee2e6;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* 影を少し強調 */
+  --font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* --- 基本設定 --- */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  overflow: hidden; /* 画面全体のスクロールを禁止 */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* --- 全画面レイアウトの親 --- */
+.container.full-height {
+  width: 100vw;
+  height: 100vh;
+  position: relative; /* 子要素を絶対配置する基準点 */
+}
+
+/* ★★★ 修正のポイント ★★★ */
+/* mainContentとmap-wrapperが画面全体に広がるように設定 */
+.mainContent.map-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* z-indexは指定せず、他の要素の背面に配置 */
+}
+
+/* マップコンテナは親要素いっぱいに広がる */
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* --- オーバーレイ要素の共通設定 --- */
+.header,
+.sidebar,
+.footer,
+.legend-container {
+  position: absolute;
+  z-index: 10; /* マップより手前に表示 */
+  background-color: var(--background-color-panel);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+/* --- ヘッダー --- */
+.header {
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%); /* 中央揃え */
+  width: 90%;
+  max-width: 600px;
+  padding: 1rem;
+  text-align: center;
+}
+.header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+.header p {
+  margin: 0 0 1rem 0;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+/* --- Add these new rules --- */
+
+/* Blue button for "Current Location" */
+.btn-location {
+  background-color: #007bff; /* A standard blue color */
+}
+
+.btn-location:hover:not(:disabled) {
+  background-color: #c0c0c0; /* A darker blue for hover */
+}
+
+/* Red button for "Hotel" */
+.btn-hotel {
+  background-color: #fd3e51; /* A standard red color */
+}
+
+.btn-hotel:hover:not(:disabled) {
+  background-color: #c0c0c0; /* A darker red for hover */
+}
+
+
+/* --- Your existing styles will still apply to both buttons --- */
+.location-switcher button {
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+  margin: 0 5px; /* Optional: Adds a little space between buttons */
+}
+
+.location-switcher button:disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+}
+
+
+
+/* --- サイドバー --- */
+.sidebar {
+  top: 1rem;
+  left: 1rem;
+  width: 280px;
+  padding: 1.5rem;
+  max-height: calc(100vh - 8rem); /* 高さを制限 */
+  overflow-y: auto;
+}
+.sidebar h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+.layer-control {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.layer-control input[type="checkbox"] {
+  margin-right: 0.8rem;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+.layer-control label {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+/* --- 凡例 --- */
+/* .legend-container {
+  bottom: 4rem;
+  right: 1rem;
+  padding: 10px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+.legend-item p {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.legend-item img {
+  max-width: 100%;
+} */
+
+
+/* --- フッター --- */
+.footer {
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1.5rem;
+}
+.backLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+.backLink:hover {
+  text-decoration: underline;
+}
+
+/* --- 地図上のピン --- */
+.location-pin {
+  width: 20px;
+  height: 20px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  border: 2px solid white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+.hotel-pin { background-color: #ff4d4d; }
+.user-pin { background-color: #4d79ff; }

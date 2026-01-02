@@ -1,0 +1,29 @@
+[
+  {
+    "name_en": "Embassy of the United States of America",
+    "name_ja": "在日米国大使館",
+    "represented_iso": "US",
+    "phone": "+81-3-3224-5000",
+    "website": "https://jp.usembassy.gov",
+    "lat": 35.6704,
+    "lng": 139.7429
+  },
+  {
+    "name_en": "Embassy of France in Japan",
+    "name_ja": "在日フランス大使館",
+    "represented_iso": "FR",
+    "phone": "+81-3-5798-6000",
+    "website": "https://jp.ambafrance.org/",
+    "lat": 35.6455,
+    "lng": 139.7366
+  },
+  {
+    "name_en": "Embassy of the People's Republic of China in Japan",
+    "name_ja": "在日本中国大使館",
+    "represented_iso": "CN",
+    "phone": "+81-3-3403-3380",
+    "website": "https://www.china-embassy.or.jp/",
+    "lat": 35.6658,
+    "lng": 139.7213
+  }
+]

@@ -1,0 +1,17 @@
+.logoImg {
+  width: 200px;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.title {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-weight: 550;
+  font-size: 15px;
+}
+
+.headerBorder {
+  /* color: ; */
+}

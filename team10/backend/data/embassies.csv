@@ -1,0 +1,10 @@
+represented_iso,type,name_en,name_ja,city,address_en,address_ja,phone,website,lat,lng
+US,embassy,Embassy of the United States of America,在日米国大使館,Tokyo,1-10-5 Akasaka, Minato-ku, 東京都港区赤坂1-10-5,+81-3-3224-5000,https://jp.usembassy.gov,35.6704,139.7429
+US,consulate,U.S. Consulate Osaka,在大阪・神戸米国総領事館,Osaka,2-11-5 Nishitenma, Kita-ku, 大阪市北区西天満2-11-5,+81-6-6315-5900,https://jp.usembassy.gov,34.6950,135.5119
+KR,embassy,Embassy of the Republic of Korea,在日本大韓民国大使館,Tokyo,1-2-5 Minami-Azabu, Minato-ku, 東京都港区南麻布1-2-5,+81-3-3452-7611,https://overseas.mofa.go.kr/jp-ja,35.6518,139.7376
+CN,embassy,Embassy of the People's Republic of China,在日本中国大使館,Tokyo,3-4-33 Motoazabu, Minato-ku, 東京都港区元麻布3-4-33,+81-3-3403-3388,http://jp.china-embassy.gov.cn,35.6546,139.7305
+GB,embassy,British Embassy Tokyo,在日英国大使館,Tokyo,1 Ichiban-cho, Chiyoda-ku, 東京都千代田区一番町1,+81-3-5211-1100,https://www.gov.uk/world/organisations/british-embassy-tokyo,35.6845,139.7387
+AU,embassy,Australian Embassy Tokyo,在日オーストラリア大使館,Tokyo,2-1-14 Mita, Minato-ku, 東京都港区三田2-1-14,+81-3-5232-4111,https://japan.embassy.gov.au,35.6474,139.7396
+IN,embassy,Embassy of India,在日インド大使館,Tokyo,2-2-11 Kudan-Minami, Chiyoda-ku, 東京都千代田区九段南2-2-11,+81-3-3262-2391,https://www.indembassy-tokyo.gov.in,35.6938,139.7485
+FR,embassy,Embassy of France,在日フランス大使館,Tokyo,4-11-44 Minami Azabu, Minato-ku, 東京都港区南麻布4-11-44,+81-3-5798-6000,https://jp.ambafrance.org,35.6479,139.7311
+DE,embassy,Embassy of Germany,在日ドイツ連邦共和国大使館,Tokyo,4-5-10 Minami Azabu, Minato-ku, 東京都港区南麻布4-5-10,+81-3-5791-7700,https://japan.diplo.de,35.6515,139.7297
